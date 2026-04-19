@@ -1,15 +1,14 @@
-const itens = document.querySelectorAll('.projeto-item');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visivel');
-        observer.unobserve(entry.target);
+function checarVisibilidade() {
+    document.querySelectorAll('.projeto-item:not(.visivel)').forEach(item => {
+      const rect = item.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        item.classList.add('visivel');
       }
     });
-  }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
-  });
+  }
 
-itens.forEach(item => observer.observe(item));
+  // Roda no scroll
+  window.addEventListener('scroll', checarVisibilidade);
+
+  // Roda ao carregar (para itens já visíveis)
+  window.addEventListener('load', checarVisibilidade);

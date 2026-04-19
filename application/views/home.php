@@ -79,7 +79,7 @@
             <div class="techs">
               <span>HTML</span><span>CSS</span><span>JS</span>
             </div>
-            <p>Landing page de hamburgueria desenvolvida com</p>
+            <p>Landing page responsiva de hamburgueria com carrossel, animações e múltiplas seções promocionais</p>
             <a href="https://rafaellanads.github.io/KingBurguer/" target="_blank" class="btn-projeto">
               <img src="<?php echo base_url('assets/img/github.png'); ?>" alt="GitHub">
               Projeto
@@ -179,7 +179,64 @@
     </div>
   </section>
 
-  <!-- Bootstrap 5 JS -->
+  <section class="competencias">
+    <div class="competencias-wrapper">
+
+      <h2 class="projetos-titulo">Competências</h2>
+      <p class="competencias-sub">Essas são as habilidades e tecnologias que domino:</p>
+
+      <div class="competencias-grid">
+
+        <div class="comp-bloco">
+          <div class="comp-icons">
+            <img src="<?php echo base_url('assets/img/html.png'); ?>" alt="HTML">
+            <img src="<?php echo base_url('assets/img/css.png'); ?>" alt="CSS">
+          </div>
+          <h3>HTML & CSS</h3>
+          <div class="comp-techs">
+            <span>HTML5</span><span>CSS3</span>
+          </div>
+          <p>Criação de interfaces semânticas, responsivas e acessíveis. Domínio de Flexbox, Grid, animações CSS e boas práticas de estruturação de código.</p>
+        </div>
+
+        <div class="comp-bloco">
+          <div class="comp-icons">
+            <img src="<?php echo base_url('assets/img/js.png'); ?>" alt="JavaScript">
+            <img src="<?php echo base_url('assets/img/node.png'); ?>" alt="Node.js">
+          </div>
+          <h3>JavaScript & Node.js</h3>
+          <div class="comp-techs">
+            <span>JavaScript</span><span>Node.js</span>
+          </div>
+          <p>Desenvolvimento de interfaces dinâmicas e interativas no front-end, além de APIs e aplicações server-side com Node.js e seus ecossistemas.</p>
+        </div>
+
+        <div class="comp-bloco">
+          <div class="comp-icons">
+            <img src="<?php echo base_url('assets/img/php.png'); ?>" alt="PHP">
+            <img src="<?php echo base_url('assets/img/ci.png'); ?>" alt="CodeIgniter">
+          </div>
+          <h3>PHP & CodeIgniter</h3>
+          <div class="comp-techs">
+            <span>PHP</span><span>CI3</span><span>CI4</span>
+          </div>
+          <p>Desenvolvimento back-end com PHP e framework CodeIgniter nas versões 3 e 4. Criação de sistemas MVC, rotas, models, controllers e integração com banco de dados.</p>
+        </div>
+
+        <div class="comp-bloco">
+          <div class="comp-icons">
+            <img src="<?php echo base_url('assets/img/figma.png'); ?>" alt="Figma">
+          </div>
+          <h3>Figma</h3>
+          <div class="comp-techs">
+            <span>UI Design</span><span>Protótipo</span>
+          </div>
+          <p>Criação de wireframes, protótipos interativos e designs de alta fidelidade. Organização de componentes, auto layout e handoff para desenvolvimento.</p>
+        </div>
+
+      </div>
+    </div>
+</section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="<?= base_url('assets/js/projetos.js'); ?>"></script>
 </body>
