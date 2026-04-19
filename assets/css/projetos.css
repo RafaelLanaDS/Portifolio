@@ -1,0 +1,178 @@
+/* ── SECTION ── */
+.projetos {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.projetos .fundo-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* ── WRAPPER GERAL ── */
+.projetos-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 40px 60px;
+    min-height: 100vh;
+}
+
+/* ── TÍTULO NO TOPO ── */
+.projetos-titulo {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 900;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 48px;   /* espaço entre título e imagens */
+    background: linear-gradient(160deg, #ffffff 0%, #888888 60%, #1a1a1a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── LINHA DAS COLUNAS ── */
+.projetos-colunas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1800px;
+    gap: 40px;
+}
+
+/* ── CADA PROJETO (imagem + desc abaixo) ── */
+.projeto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.projeto-item .projeto-img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ── DESCRIÇÃO SEM FUNDO ── */
+.descricao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    color: #fff;
+    margin-top: -4rem;
+}
+
+.descricao h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.descricao p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ccc;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 280px;
+}
+
+/* ── TAGS TECNOLOGIAS ── */
+.techs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.techs span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(160, 80, 255, 0.5);
+    color: #c084fc;
+    background: rgba(160, 80, 255, 0.1);
+    letter-spacing: 0.5px;
+}
+
+/* ── BOTÃO CINZA ── */
+.btn-projeto {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    padding: 10px 22px;
+    background: #6b7280;       /* cinza */
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-projeto img {
+    width: 18px;
+    height: 18px;
+    filter: invert(1);
+}
+
+.btn-projeto:hover {
+    box-shadow: 0 0 18px 4px rgba(160, 80, 255, 0.7);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 768px) {
+    .projetos-colunas {
+        flex-direction: column;
+        align-items: center;
+  }
+
+  .projeto-item .projeto-img {
+    max-width: 320px;
+  }
+}
+
+/* ── ANIMAÇÃO DE SCROLL ── */
+
+/* Item da esquerda entra vindo do canto inferior esquerdo */
+.projetos-colunas .projeto-item:nth-child(1) {
+    opacity: 0;
+    transform: translate(-80px, 60px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Item da direita entra vindo do canto inferior direito */
+.projetos-colunas .projeto-item:nth-child(2) {
+    opacity: 0;
+    transform: translate(80px, 60px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: 0.12s;
+}
+
+/* Posição final dos dois */
+.projeto-item.visivel {
+    opacity: 1;
+    transform: translate(0, 0);
+}
