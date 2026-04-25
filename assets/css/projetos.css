@@ -1,9 +1,4 @@
-/* ══════════════════════════════════════════════════
-   PROJETOS.CSS
-   Depende de: global.css (variáveis CSS)
-   ══════════════════════════════════════════════════ */
 
-/* ── SEÇÃO ───────────────────────────────────────── */
 .projetos {
   position: relative;
   overflow: hidden;
@@ -31,13 +26,21 @@
 }
 
 /* ── TÍTULO ──────────────────────────────────────── */
+.competencias{
+  padding: 30px 40px !important;
+}
+
+.competencias-sub{
+  margin-top: 0.5rem !important;
+}
+
 .projetos-titulo {
   font-size: clamp(3rem, 7vw, 6rem);
   font-weight: 900;
   text-align: center;
   line-height: 1;
   letter-spacing: -2px;
-  margin-bottom: 48px;
+  padding: 1rem;
   background: linear-gradient(160deg, #ffffff 0%, #888888 60%, #1a1a1a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -54,7 +57,20 @@
   max-width: 1800px;
   gap: 40px;
 }
+.name-linguagen {
+  text-align: center;
+  color: white;
+  font-family: var(--font-main);
+  font-size: 2.25rem;
+  font-weight: 900;
+}
 
+.comp-techs{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 /* ── ITEM ────────────────────────────────────────── */
 .projeto-item {
   display: flex;
@@ -88,7 +104,9 @@
   font-weight: 700;
   margin: 0;
 }
-
+.comp-bloco p{
+  font-size: 1.075rem !important;
+}
 .descricao p {
   font-size: 1rem;
   font-weight: 600;
